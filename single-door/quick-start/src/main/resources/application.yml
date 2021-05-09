@@ -1,0 +1,6 @@
+server:
+  port: 39391
+
+spring:
+  application:
+    name: quick-start-security

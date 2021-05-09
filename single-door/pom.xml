@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>iron-door</artifactId>
+        <groupId>com.sheep</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.sheep</groupId>
+    <artifactId>single-door</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>single-door</name>
+    <description>Single Demo With Spring Security</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>quick-start</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <security.starter.version>2.4.2</security.starter.version>
+        <security.test.version>5.4.6</security.test.version>
+        <spring.version>2.4.5</spring.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Security项目开始 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${security.starter.version}</version>
+            </dependency>
+
+            <!-- Spring Security测试 -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-test</artifactId>
+                <version>${security.test.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Spring热部署 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>${spring.version}</version>
+                <scope>runtime</scope>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- Spring测试 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- 标记是一个web项目 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- 需要添加
+<html  xmlns:th="http://www.thymeleaf.org">
+这样在后面的th标签就不会报错
+ -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>登录页面</title>
 </head>
 <body>
@@ -10,7 +14,7 @@
     <br>
     密&ensp;&ensp;码:<input type="password" name="secret">
     <br>
-    <button type="submit" value="login">确 认</button>
+    <input type="submit" />
 </form>
 </body>
 </html>

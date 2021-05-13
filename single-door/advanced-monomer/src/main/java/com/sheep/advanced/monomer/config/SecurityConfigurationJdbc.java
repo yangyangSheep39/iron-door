@@ -46,7 +46,7 @@ public class SecurityConfigurationJdbc extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/base/successful")
                 .and()
                 //设置不需要认证的路径
-                .authorizeRequests().antMatchers("/base/hello", "/user/login").permitAll()
+                .authorizeRequests().antMatchers("/*", "/base/hello", "/user/login", "/base/successful").permitAll()
                 //任何请求都必须经过身份验证
                 .anyRequest().authenticated()
                 //关闭csrf防护

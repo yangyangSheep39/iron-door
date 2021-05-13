@@ -13,7 +13,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("com.sheep.advanced.monomer.mapper")
 public class AdvancedMonomerApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(AdvancedMonomerApplication.class, args);
     }

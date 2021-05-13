@@ -1,4 +1,4 @@
-package com.sheep.quickstart.entity;
+package com.sheep.advanced.monomer.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

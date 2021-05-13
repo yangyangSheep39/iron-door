@@ -18,6 +18,7 @@
 
     <modules>
         <module>quick-start</module>
+        <module>advanced-monomer</module>
     </modules>
 
     <properties>

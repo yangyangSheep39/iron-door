@@ -1,7 +1,7 @@
-package com.sheep.quickstart.mapper;
+package com.sheep.advanced.monomer.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sheep.quickstart.entity.MyUser;
+import com.sheep.advanced.monomer.entity.MyUser;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

@@ -1,5 +1,6 @@
 package com.sheep.quickstart;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @createTime 2021/5/9 18:51
  */
 @SpringBootApplication
+@MapperScan("com.sheep.quickstart.mapper")
 public class QuickStartApplication {
 
     public static void main(String[] args) {

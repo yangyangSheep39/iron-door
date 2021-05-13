@@ -12,8 +12,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * @Description security配置类
  * @createTime 2021年05月09日 17:42
  */
-@Configuration
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+//@Configuration
+public class SecurityConfigurationInMemory extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

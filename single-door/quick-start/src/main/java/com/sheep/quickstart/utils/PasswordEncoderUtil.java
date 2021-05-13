@@ -13,10 +13,16 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class PasswordEncoderUtil {
-    @Bean
-    PasswordEncoder password() {
-        return new BCryptPasswordEncoder();
-    }
+    /**
+     * 在使用jdbc方式的时候用会冲突
+     *
+     * @return
+     */
+    //@Bean
+    //PasswordEncoder password() {
+    //    return new BCryptPasswordEncoder();
+    //}
+
 
     /**
      * 进行密码加密

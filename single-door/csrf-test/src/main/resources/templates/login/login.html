@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- 需要添加
+<html  xmlns:th="http://www.thymeleaf.org">
+这样在后面的th标签就不会报错
+ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>登录页面</title>
+    </head>
+    <body>
+        <form action="/userLogin" method="POST">
+            <h1>Login Error!Login Again!</h1>
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="_csrf.token"><br>
+            用户名:<input type="text" name="username">
+            <br>
+            密&ensp;&ensp;码:<input type="password" name="secret">
+            <br>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>

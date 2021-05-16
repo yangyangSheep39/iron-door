@@ -2,6 +2,7 @@ package com.sheep.advanced.monomer.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * @author yangyangSheep
@@ -10,6 +11,7 @@ import lombok.Data;
  * @Description 自定义用户
  */
 @Data
+@Accessors(chain = true)
 @TableName("user")
 public class MyUser {
 

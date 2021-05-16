@@ -1,10 +1,6 @@
-package com.sheep.advanced.monomer.service;
+package com.sheep.csrftest.service;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.sheep.advanced.monomer.entity.MyUser;
-import com.sheep.advanced.monomer.mapper.MyUserMapper;
-import com.sheep.advanced.monomer.utils.PasswordEncoderUtil;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.sheep.csrftest.utils.PasswordEncoderUtil;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
@@ -23,25 +19,10 @@ import java.util.List;
  */
 @Service("myUserDetailsService")
 public class UserDetailServiceImpl implements UserDetailsService {
-    @Autowired
-    private MyUserMapper myUserMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        //以下为数据库查询操作
-        QueryWrapper<MyUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("username", username);
-        MyUser myUser = myUserMapper.selectOne(queryWrapper);
-        if (myUser == null) {
-            throw new UsernameNotFoundException("用户不存在");
-        }
-
-        //lisi
         List<GrantedAuthority> auths = AuthorityUtils.commaSeparatedStringToAuthorityList("hasAuthorityConfigAdmin,ROLE_hasRoleConfigAdmin,ROLE_testSecured,testPreAuthorize");
-
-        //wangwu
-        //List<GrantedAuthority> auths = AuthorityUtils.commaSeparatedStringToAuthorityList("admin");
-
-        return new User(myUser.getUsername(), PasswordEncoderUtil.encode(myUser.getPassword()), auths);
+        return new User("Lucy", PasswordEncoderUtil.encode("123"), auths);
     }
 }

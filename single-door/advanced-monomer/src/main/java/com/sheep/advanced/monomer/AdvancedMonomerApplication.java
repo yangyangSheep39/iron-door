@@ -3,6 +3,7 @@ package com.sheep.advanced.monomer;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 /**
  * @author yangyangSheep
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan("com.sheep.advanced.monomer.mapper")
+@EnableWebSecurity(debug = true)
 public class AdvancedMonomerApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdvancedMonomerApplication.class, args);

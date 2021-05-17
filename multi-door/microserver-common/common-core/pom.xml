@@ -6,12 +6,13 @@
         <artifactId>microserver-common</artifactId>
         <groupId>com.sheep</groupId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>common-core</artifactId>
-    <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
 
 
     <properties>
@@ -35,7 +36,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -54,10 +54,11 @@
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <scope>compile</scope>
+            <version>1.2.75</version>
         </dependency>
 
         <!-- Spring Security项目开始 -->
@@ -92,12 +93,7 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
+
 
         <!--            &lt;!&ndash; 标记是一个web项目 &ndash;&gt;-->
         <!--            <dependency>-->

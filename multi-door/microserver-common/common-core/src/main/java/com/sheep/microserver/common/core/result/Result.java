@@ -1,6 +1,7 @@
 package com.sheep.microserver.common.core.result;
 
 import com.sheep.microserver.common.core.enums.ErrorCodeEnum;
+import lombok.Data;
 
 import java.io.Serializable;
 

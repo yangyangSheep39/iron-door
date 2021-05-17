@@ -1,12 +1,12 @@
 package com.sheep.microserver.common.core.enums;
-/**
- * <p> 错误码 </p>
- * 2021/2/3
- *
- * @author Ethereal
- * @version v1.0.0
- */
 
+
+/**
+ * @author yangyangSheep
+ * @ClassName ErrorCodeEnum.java
+ * @Description 错误码
+ * @createTime 2021/5/17 20:00
+ */
 public enum ErrorCodeEnum {
 
 

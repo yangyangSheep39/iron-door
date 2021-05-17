@@ -16,6 +16,7 @@
 
 
     <properties>
+        <java.version>1.8</java.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
@@ -34,19 +35,9 @@
             <artifactId>commons-pool2</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.4</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>5.5.8</version>
         </dependency>
 
         <!-- json支持 -->
@@ -89,12 +80,11 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- javaEE6 jar 用于ResponseUtil的HttpServletResponse -->
         <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
         </dependency>
-
-
         <!--            &lt;!&ndash; 标记是一个web项目 &ndash;&gt;-->
         <!--            <dependency>-->
         <!--                <groupId>org.springframework.boot</groupId>-->

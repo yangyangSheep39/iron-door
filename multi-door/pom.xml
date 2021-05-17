@@ -28,12 +28,12 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.0</spring-cloud.version>
-        <java.version>1.8</java.version>
         <security.starter.version>2.4.2</security.starter.version>
         <security.test.version>5.4.6</security.test.version>
         <spring.version>2.4.5</spring.version>
         <mysql.version>8.0.22</mysql.version>
         <mybatis.version>3.3.2</mybatis.version>
+        <hutool.version>5.5.8</hutool.version>
     </properties>
 
 
@@ -108,6 +108,23 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

@@ -28,6 +28,7 @@
         <java.version>1.8</java.version>
         <spring.devtools.version>2.4.5</spring.devtools.version>
         <spring.boot.test.version>2.4.5</spring.boot.test.version>
+        <guava.version>29.0-jre</guava.version>
     </properties>
 
 
@@ -48,6 +49,13 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring.boot.test.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <!-- Google guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

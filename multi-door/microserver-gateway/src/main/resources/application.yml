@@ -1,0 +1,80 @@
+server:
+  port: 39001
+eureka:
+  instance:
+    instance-id: ${spring.application.name}(${spring.cloud.client.ip-address}:${server.port})
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: https://eureka:Hande2021@106.15.177.69:10907/eureka
+
+spring:
+  application:
+    name: microserver-gateway
+  #  profiles:
+  #    active: dev
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 开启SpringCloud Gateway的注册中心发现配置，开启后可自动从服务注册中心拉取服务列表，通过各个服务的spring.application.name作为前缀进行转发，该配置默认为false
+          enabled: true
+          # 是否将服务名称转为小写
+          lower-case-service-id: true
+  main:
+    allow-bean-definition-overriding: true
+  #redis单机版
+  redis:
+    host: 106.15.177.69
+    port: 43999
+    password: Hande@.7b61a2
+    timeout: 60000
+    database: 15
+    lettuce:
+      pool:
+        max-active: 32
+        max-idle: 16
+        min-idle: 8
+
+
+#日志
+#logging:
+#  level:
+#    root: info
+#  file:
+#    name: gateway.log
+#    path: /home/local/web_service/gateway
+
+# 自己定义安全配置
+#phospherus:
+#  security:
+#    login:
+#      /auth/login
+#    # 白名单列表 无需验证登录
+#    ignored:
+#      - "/actuator/**"              # 健康检查
+#      - "/userApi/*"                # 获取用户信息
+#      - "/phospherus-security/oauth/token"  # 获取token或者刷新token
+#      - "/phospherus-security/rsa/publicKey"  # 获取公钥
+#      # swagger 配置
+#      - /swagger-resources/**
+#      - /swagger-resources
+#      - /course/coursebase/**
+#      - /swagger-ui/**
+#      - /favicon.ico
+#      - /rsa/publicKey # 获取公钥
+#      - /oauth/token
+#      - /oauth/check_token
+#      - /user/login
+#      - /login
+#      - /health
+#      - /api/socket/**
+#    # 需要验证，但是不需要具体角色,登录即可访问
+#    not-role:
+#      - "/**/*Api/**"
+#      - "/*Api/**"
+#    need-check:
+#      - /phospherus-security/**
+#      - /phospherus-management/**

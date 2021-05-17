@@ -23,11 +23,11 @@
 
     <dependencies>
         <!-- 注入通用的核心包,以便于使用结果集等工具-->
-<!--        <dependency>-->
-<!--            <groupId>com.sheep</groupId>-->
-<!--            <artifactId>common-core</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.sheep</groupId>
+            <artifactId>common-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
         <!-- Spring Security依赖 -->
         <dependency>
@@ -42,5 +42,23 @@
             <artifactId>java-jwt</artifactId>
             <version>3.13.0</version>
         </dependency>
+
+        <!-- 工具包 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -9,7 +9,6 @@
 
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.sheep</groupId>
     <artifactId>multi-door</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>multi-door</name>
@@ -17,25 +16,97 @@
     <packaging>pom</packaging>
 
 
+    <modules>
+        <module>microserver-common</module>
+        <module>microserver-gateway</module>
+        <module>microserver-security</module>
+        <module>microserver-otherserver</module>
+    </modules>
+
+
     <properties>
         <java.version>1.8</java.version>
+        <spring-cloud.version>2020.0.0</spring-cloud.version>
+        <java.version>1.8</java.version>
+        <security.starter.version>2.4.2</security.starter.version>
+        <security.test.version>5.4.6</security.test.version>
+        <spring.version>2.4.5</spring.version>
+        <mysql.version>8.0.22</mysql.version>
+        <mybatis.version>3.3.2</mybatis.version>
     </properties>
-    <dependencies>
-        <!-- Spring热部署 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
 
-        <!-- Spring测试 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Spring Security项目开始 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${security.starter.version}</version>
+            </dependency>
+
+            <!-- Spring Security测试 -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-test</artifactId>
+                <version>${security.test.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Spring热部署 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>${spring.version}</version>
+                <scope>runtime</scope>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- Spring测试 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!--            &lt;!&ndash; 标记是一个web项目 &ndash;&gt;-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-starter-web</artifactId>-->
+            <!--                <version>${spring.version}</version>-->
+            <!--            </dependency>-->
+
+            <!-- Mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- mbMybatis Plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
         <plugins>
@@ -45,5 +116,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

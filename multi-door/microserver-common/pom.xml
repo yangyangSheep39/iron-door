@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>multi-door</artifactId>
+        <groupId>com.sheep</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>microserver-common</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>microserver-common</name>
+    <description>MicroServer Core Package With Spring Security</description>
+    <packaging>pom</packaging>
+
+
+    <modules>
+        <module>common-core</module>
+        <module>common-security</module>
+    </modules>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring-cloud.version>2020.0.0</spring-cloud.version>
+    </properties>
+</project>

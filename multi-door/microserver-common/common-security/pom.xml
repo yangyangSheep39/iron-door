@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>microserver-common</artifactId>
+        <groupId>com.sheep</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>common-security</artifactId>
+    <packaging>jar</packaging>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <security.version>2.2.4.RELEASE</security.version>
+    </properties>
+
+
+    <dependencies>
+        <!-- 注入通用的核心包,以便于使用结果集等工具-->
+<!--        <dependency>-->
+<!--            <groupId>com.sheep</groupId>-->
+<!--            <artifactId>common-core</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
+
+        <!-- Spring Security依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${security.version}</version>
+        </dependency>
+
+        <!-- Jwt 用于加密 -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.13.0</version>
+        </dependency>
+    </dependencies>
+</project>

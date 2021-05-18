@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 **/mvnw
 **/mvnw.cmd
-*.log
+
 
 ### STS ###
 .apt_generated
@@ -21,6 +21,7 @@ target/
 *.iws
 *.iml
 *.ipr
+*.log
 
 ### NetBeans ###
 /nbproject/private/

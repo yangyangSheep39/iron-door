@@ -20,6 +20,18 @@ spring:
     time-zone: GMT+8
   main:
     allow-bean-definition-overriding: true
+  #redis单机版
+  redis:
+    host: 106.15.177.69
+    port: 43999
+    password: Hande@.7b61a2
+    timeout: 60000
+    database: 15
+    lettuce:
+      pool:
+        max-active: 32
+        max-idle: 16
+        min-idle: 8
 
 #日志
 logging:

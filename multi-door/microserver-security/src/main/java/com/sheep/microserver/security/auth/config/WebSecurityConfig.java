@@ -52,12 +52,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().cors().disable()
                 .formLogin()
-                //登录接口地址
+                //登录的地址,和前台的登录页面匹配
                 .loginPage("http://localhost:8080/#/login")
                 //自定义属性
                 .usernameParameter("username")
                 .passwordParameter("secret")
-                //登录的地址,和前台的登录页面匹配
+                //登录接口地址
                 .loginProcessingUrl("/user/login")
                 //登录成功返回json
                 .successHandler(authenticationSuccess)

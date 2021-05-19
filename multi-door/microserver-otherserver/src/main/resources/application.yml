@@ -1,5 +1,5 @@
 server:
-  port: 3992
+  port: 3993
 eureka:
   instance:
     instance-id: ${spring.application.name}(${spring.cloud.client.ip-address}:${server.port})
@@ -11,7 +11,7 @@ eureka:
       defaultZone: http://eureka:Hande2021@106.15.177.69:10907/eureka
 spring:
   application:
-    name: microserver-security
+    name: microserver-otherserver
   #  profiles:
   #    active: dev
   # 设置时区和json统一时间格式

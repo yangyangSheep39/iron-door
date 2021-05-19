@@ -2,6 +2,8 @@ package com.sheep.microserver.otherserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author yangyangSheep
@@ -10,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @createTime 2021/5/17 18:17
  */
 @SpringBootApplication
+@EnableEurekaClient
+@ComponentScan("com.sheep.*")
 public class MicroServerOtherServerApplication {
 
     public static void main(String[] args) {

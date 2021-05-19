@@ -10,7 +10,7 @@ import lombok.Data;
  * @Description 自定义用户
  */
 @Data
-@TableName("user")
+@TableName("single_user")
 public class MyUser {
 
     private Long id;

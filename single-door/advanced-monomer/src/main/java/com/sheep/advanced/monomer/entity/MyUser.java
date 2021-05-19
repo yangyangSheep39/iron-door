@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-@TableName("user")
+@TableName("single_user")
 public class MyUser {
 
     private Long id;

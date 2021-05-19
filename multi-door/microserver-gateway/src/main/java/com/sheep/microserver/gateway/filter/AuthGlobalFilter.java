@@ -39,7 +39,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
     private AntPathMatcher antPathMatcher = new AntPathMatcher();
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -91,7 +91,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         DataBuffer buffer = response.bufferFactory().wrap(bits);
         response.setStatusCode(HttpStatus.UNAUTHORIZED);
         //指定编码，否则在浏览器中会中文乱码
-        response.getHeaders().add("Content-Type", "text/plain;charset=UTF-8");
+        response.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
         return response.writeWith(Mono.just(buffer));
     }
 

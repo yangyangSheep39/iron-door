@@ -37,8 +37,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
         String authorityListStr = menus.stream()
                 .map(Menu::getMenuAuth)
                 .collect(Collectors.joining(","));*/
+        //实际上是查询数据库的用户
         UserDTO copyBean = new UserDTO();
-        String authorityListStr = "";
+        copyBean.setSecret(username);
+        copyBean.setSecret("$2a$10$glktQRTODJ/2XFTdqtmyu.tYhrWDARnQx3jzMN4XPQsuQEVLks8W2");
+        String authorityListStr = "testOtherServerAuth";
         List<GrantedAuthority> authorities = AuthorityUtils.commaSeparatedStringToAuthorityList(authorityListStr);
         //从数据库查询对象中得到用户名和密码，返回
         return new SecurityUser(copyBean, authorities);

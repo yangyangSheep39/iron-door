@@ -38,7 +38,7 @@ import java.util.stream.Collectors;
 public class AuthenticationSuccess implements AuthenticationSuccessHandler {
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {

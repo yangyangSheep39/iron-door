@@ -52,19 +52,6 @@
             <version>1.2.75</version>
         </dependency>
 
-        <!-- Spring Security项目开始 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
-        <!-- Spring Security测试 -->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <!-- Spring热部署 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -91,6 +78,12 @@
         <!--                <artifactId>spring-boot-starter-web</artifactId>-->
         <!--                <version>${spring.version}</version>-->
         <!--            </dependency>-->
+
+        <!-- security核心包 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
     </dependencies>
 
 

@@ -67,7 +67,7 @@ public class AuthFilter extends BasicAuthenticationFilter {
     public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         Result result = new Result();
         result.setCode(500);
-        response.setHeader("content-type", "text/html;charset=utf-8");
+        response.setHeader("content-type", "application/json;;charset=utf-8");
         //获取Token
         Enumeration<String> headerValue = request.getHeaders("Authorization");
         String token = "";

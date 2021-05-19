@@ -15,7 +15,6 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @ComponentScan("com.sheep.*")
 public class MicroServerOtherServerApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(MicroServerOtherServerApplication.class, args);
     }

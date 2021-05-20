@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author yangyangSheep
  * @ClassName IndexController.java
- * @Description 默认的借口列表
+ * @Description 默认的公用接口列表
  * @createTime 2021/3/12 15:38
  */
 @Slf4j

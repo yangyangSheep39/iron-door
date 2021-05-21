@@ -1,6 +1,6 @@
 # iron-door
 
-Spring Security Demo - single/microserver
+Spring Security Demo - single/microserver   Spring Security微服务和单体项目演示
 
 ## 项目结构
 
@@ -130,19 +130,19 @@ iron-door                                                                       
     │           │       └── sheep                                                       ----
     │           │           └── quickstart                                              ----
     │           │               ├── config                                              ----
-    │           │               │   ├── SecurityConfigurationInMemory.java              ----
-    │           │               │   └── SecurityConfigurationJdbc.java                  ----
+    │           │               │   ├── SecurityConfigurationInMemory.java              基于内存中配置认证security
+    │           │               │   └── SecurityConfigurationJdbc.java                  基于数据库配置认证security
     │           │               ├── controller                                          ----
-    │           │               │   └── FirstController.java                            ----
+    │           │               │   └── FirstController.java                            第一个快速开始测试控制层
     │           │               ├── entity                                              ----
-    │           │               │   └── MyUser.java                                     ----
+    │           │               │   └── MyUser.java                                     自定义用户
     │           │               ├── mapper                                              ----
-    │           │               │   └── MyUserMapper.java                               ----
+    │           │               │   └── MyUserMapper.java                               用户Mapper
     │           │               ├── QuickStartApplication.java                          ----
     │           │               ├── service                                             ----
-    │           │               │   └── UserDetailServiceImpl.java                      ----
+    │           │               │   └── UserDetailServiceImpl.java                      UserDetailsService的自定义登录实现类
     │           │               └── utils                                               ----
-    │           │                   └── PasswordEncoderUtil.java                        ----
+    │           │                   └── PasswordEncoderUtil.java                        密码处理工具
     │           └── resources                                                           ----
     │               └── application.yml                                                 ----
     ├── advanced-monomer                                                                单体项目进阶演示
@@ -156,14 +156,14 @@ iron-door                                                                       
     │           │               └── monomer                                             ----
     │           │                   ├── AdvancedMonomerApplication.java                 ----
     │           │                   ├── config                                          ----
-    │           │                   │   └── SecurityConfigurationJdbc.java              ----
+    │           │                   │   └── SecurityConfigurationJdbc.java              security配置类
     │           │                   ├── controller                                      ----
-    │           │                   │   ├── AuthorityController.java                    ----
-    │           │                   │   └── BaseController.java                         ----
+    │           │                   │   ├── AuthorityController.java                    授权测试控制层
+    │           │                   │   └── BaseController.java                         认证系统基本控制层
     │           │                   ├── entity                                          ----
     │           │                   │   └── MyUser.java                                 数据库自定义用户实体类
     │           │                   ├── mapper                                          ----
-    │           │                   │   └── MyUserMapper.java                           ----
+    │           │                   │   └── MyUserMapper.java                           用户Mapper
     │           │                   ├── service                                         ----
     │           │                   │   └── UserDetailServiceImpl.java                  UserDetailsService的自定义登录实现类
     │           │                   └── utils                                           ----
@@ -184,20 +184,20 @@ iron-door                                                                       
                 │       └── sheep                                                       ----
                 │           └── csrftest                                                ----
                 │               ├── config                                              ----
-                │               │   └── SecurityConfig.java                             ----
+                │               │   └── SecurityConfig.java                             security配置类
                 │               ├── controller                                          ----
-                │               │   ├── CsrfController.java                             ----
-                │               │   └── LoginController.java                            ----
-                │               ├── CsrfTestApplication.java                            ----
+                │               │   ├── CsrfController.java                             csrf测试控制层
+                │               │   └── LoginController.java                            登录测试控制层
                 │               ├── service                                             ----
-                │               │   └── UserDetailServiceImpl.java                      ----
-                │               └── utils                                               ----
-                │                   └── PasswordEncoderUtil.java                        ----
+                │               │   └── UserDetailServiceImpl.java                      UserDetailsService的自定义登录实现类
+                │               ├── utils                                               ----
+                │               │   └── PasswordEncoderUtil.java                        密码工具类
+                │               └── CsrfTestApplication.java                            ----
                 └── resources                                                           ----
                     ├── application.yml                                                 ----
                     └── templates                                                       ----
                         ├── csrf                                                        ----
-                        │   ├── csrfTest.html                                           ----
+                        │   ├── csrfTest.html                                           csrf测试登录页面
                         │   └── csrf_token.html                                         ----
                         └── login                                                       ----
                             └── login.html                                              ----

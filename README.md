@@ -8,6 +8,7 @@ Spring Security Demo - single/microserver   Spring Security微服务和单体项
 iron-door                                                                               父工程 
 ├── pom.xml                                                                             项目整体依赖文件
 ├── README.md                                                                           项目说明
+├── Spring_Security.pdf                                                                 笔记汇总
 ├── multi-door                                                                          微服务项目演示模块
 │   ├── pom.xml                                                                         微服务项目整体依赖文件
 │   ├── microserver-common                                                              微服务项目核心依赖模块

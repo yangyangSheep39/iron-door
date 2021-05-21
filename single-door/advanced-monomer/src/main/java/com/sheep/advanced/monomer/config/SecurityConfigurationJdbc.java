@@ -65,7 +65,7 @@ public class SecurityConfigurationJdbc extends WebSecurityConfigurerAdapter {
                 //设置只有包含admin权限才能狗访问这个接口
                 .antMatchers("/auth/hasAuthorityConfig").hasAuthority("hasAuthorityConfigAdmin")
                 //多个权限的配置
-                .antMatchers("/auth/hasAnyAuthorityConfig").hasAuthority("hasAnyAuthorityConfigAdmin,hasAdmin")
+                .antMatchers("/auth/hasAnyAuthorityConfig").hasAnyAuthority("hasAnyAuthorityConfigAdmin,hasAdmin")
                 //针对某一个角色或者多个角色的配置,源码分析,加上Role_
                 .antMatchers("/auth/hasRoleConfig").hasRole("hasRoleConfigAdmin")
                 .antMatchers("/auth/hasAnyRoleConfig").hasAnyRole("hasAnyRoleConfigAdmin")

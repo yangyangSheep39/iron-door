@@ -39,7 +39,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
                 .collect(Collectors.joining(","));*/
         //实际上是查询数据库的用户
         UserDTO copyBean = new UserDTO();
-        copyBean.setSecret(username);
+        copyBean.setUsername(username);
         copyBean.setSecret("$2a$10$glktQRTODJ/2XFTdqtmyu.tYhrWDARnQx3jzMN4XPQsuQEVLks8W2");
         String authorityListStr = "testOtherServerAuth";
         List<GrantedAuthority> authorities = AuthorityUtils.commaSeparatedStringToAuthorityList(authorityListStr);

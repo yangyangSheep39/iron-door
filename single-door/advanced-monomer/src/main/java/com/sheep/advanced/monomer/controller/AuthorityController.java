@@ -70,7 +70,7 @@ public class AuthorityController {
      */
     @GetMapping("/testPreAuthorize")
     //@PreAuthorize("hasRole('testPreAuthorize')")
-    //@PreAuthorize("hasAnyRole('testPreAuthorize')")
+    //@PreAuthorize("hasAnyRole('testPreAuthorize,test')")
     @PreAuthorize("hasAuthority('testPreAuthorize')")
     //@PreAuthorize("hasAnyAuthority('testPreAuthorize')")
     public String testPreAuthorize() {

@@ -23,6 +23,12 @@
 
 
     <dependencies>
+        <!-- 用于Spring的健康检查、当前的Beans、系统的缓存 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!-- Spring Security项目开始 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
